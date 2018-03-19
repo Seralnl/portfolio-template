@@ -1,0 +1,286 @@
+/********************************
+*								*
+*	Created by Navi				*
+*	Copyrights (c) to Seral.nl	*
+*	v1.7.2						*
+*								*
+*********************************/
+
+
+/* Body
+*****************************************************/
+
+@font-face {
+	font-family: proxima-nova;
+	src: url(../fonts/proxima-nova.ttf);
+}
+
+body {
+	font-family: proxima-nova, Arial, sans-serif;
+	letter-spacing: .5px;
+	overflow-x: hidden;
+	line-height: 1.6;
+	font-weight: 200;
+	font-size: 15px;
+	color: #222; 
+	margin: 0;
+}
+
+img {
+	border-radius: 3px;
+	width: 100%;
+}
+
+/* Navigation
+*****************************************************/
+
+nav.navigation .navigation-items {
+	border-bottom: 1px solid #DCDCDC;
+	background-color: #FFFFFF;
+}
+
+nav.navigation .navigation-items .navbar-brand {
+	font-weight: bold;
+	padding: 16px;
+	float: left;
+}
+
+nav.navigation .navigation-items ul.links {
+	margin: 0;
+}
+
+nav.navigation .navigation-items .links {
+	float: right;
+}
+
+nav.navigation .navigation-items .links a {
+	text-decoration: none;
+	color: #333333;
+	padding: 18px;
+	float: left;
+}
+
+nav.navigation .navigation-items .links .dropdown {
+	cursor: pointer;
+	padding: 18px;
+	float: left;
+}
+
+nav.navigation .navigation-items .links .dropdown .items {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: 1px solid #DCDCDC;
+	background: #FFFFFF;
+	position: absolute;
+	margin-top: 18px;
+	z-index: 99999;
+	display: none;
+	width: 200px;
+	float: left;
+}
+
+nav.navigation .navigation-items .links .dropdown .items .divider {
+	background-color: #EEEEEE;
+	width: 100%;
+	height: 1px;
+	float: left;
+}
+
+nav.navigation .navigation-items .links .dropdown .items a {
+	text-decoration: none;
+	display: block;
+	color: #333333;
+	width: 100%;
+}
+
+nav.navigation .navigation-items .links .dropdown:hover .items {
+	display: block;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+/* Top header
+*****************************************************/
+
+header.top {
+	border-bottom: 1px solid #DCDCDC;
+	height: 450px;
+}
+
+header.top .background {
+	background: url('/stylesheet/images/header.png');
+	border-right: 1px solid #DCDCDC;
+	background-size: 100%;
+	position: relative;
+	height: 450px;
+	float: left;
+	width: 60%;
+}
+
+header.top .background .content {
+	background-color: rgba(255, 255, 255, .95);
+	border-top-left-radius: 3px;
+	position: absolute;
+	padding: 16px;
+	height: 150px;
+	width: 60%;
+	bottom: 0;
+	right: 0;
+}
+
+header.top .background .content p {
+	margin: 0;
+}
+
+header.top .information {
+	background-color: #F5F5F5;
+	height: 450px;
+	float: left;
+	width: 40%;
+}
+
+header.top .information .content {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	background-color: #FFFFFF;
+	border-radius: 3px;
+	margin: 40px 80px;
+	overflow: auto;
+	height: 370px;
+}
+
+header.top .information .content .item {
+	border-bottom: 1px solid #DCDCDC;
+	color: rgba(0,0,0,0.35);
+	padding: 16px;
+}
+
+header.top .information .content .item strong {
+	color: #333333;
+	display: block;
+}
+
+/* News section
+*****************************************************/
+
+section.news {
+	
+}
+
+section.news .card, section.news a.card {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	background-color: #FFFFFF;
+	text-decoration: none;
+	border-radius: 3px;
+	margin-right: 15px;
+	margin-top: 120px;
+	margin-left: 15px;
+	display: block;
+}
+
+section.news a.card:hover, section.news a.card:hover img.card-image {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+section.news .card img.card-image {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	border-radius: 3px;
+	margin-top: -40px;
+	margin-left: 20%;
+	height: auto;
+	width: 60%;
+}
+
+section.news .card .card-body {
+	color: #5C5C5C;
+	padding: 16px;
+}
+
+section.news .card .card-body small {
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	display: block;
+	color: #919191;
+}
+
+section.news .card .card-body strong {
+	display: block;
+	color: #333333;
+}
+
+/* Mobile elements
+*****************************************************/
+
+@media only screen and (max-width: 600px) {
+	
+	nav.navigation .navigation-items .toggle {
+		text-decoration: none;
+		position: relative;
+		padding: 7px 14px;
+		font-size: 26px;
+		cursor: pointer;
+		color: #333333;
+		display: block;
+		float: right;
+	}
+	
+	[id^=drop]:checked + ul, [id^=drop]:checked + ul.links .dropdown, [id^=drop]:checked + ul.links .dropdown .items {
+		display: block;
+		border: none;
+		padding: 0;
+	}
+	
+	nav.navigation .navigation-items .links .dropdown .items {
+		margin-top: -23px;
+		position: relative;
+		display: block;
+		width: 102.5%;
+	}
+	
+	nav.navigation .navigation-items .links .dropdown .items .divider {
+		display: none;
+	}
+
+	ul.links {
+		background-color: #FFFFFF;
+		position: absolute;
+		z-index: 99999;
+		display: none;
+		top: 50px;
+	}
+	
+	ul.links a, ul.links .dropdown .items a {
+		border-bottom: 1px solid #DCDCDC;
+		display: block;
+		width: 100%;
+	}
+	
+	header.top {
+		border-bottom: 1px solid #DCDCDC;
+		height: 450px;
+	}
+
+	header.top .background {
+		height: 200px;
+		width: 100%;
+	}
+	
+	header.top .background .content {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 200px;
+	}
+
+	header.top .information {
+		width: 100%;
+	}
+
+	header.top .information .content {
+		margin: 20px 40px;
+	}
+
+}
