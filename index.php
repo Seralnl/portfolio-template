@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-    <title>Studenten Verhuis Service</title>
+    <title>Template</title>
 
     <link href="/stylesheet/css/Bootstrap.css" rel="stylesheet">
     <link href="/stylesheet/css/Style.css" rel="stylesheet">
@@ -20,15 +20,6 @@
 				<input type="checkbox" id="drop" />
 				
 				<ul class="links">
-					<div class="dropdown">
-						Dropdown
-						<div class="items">
-							<a href="/">Item 1</a>
-							<a href="/">Item 2</a>
-							<div class="divider"></div>
-							<a href="/">Item 3</a>
-						</div>
-					</div>
 					<a href="/" class="active">Home</a>
 					<a href="/" class="active">About</a>
 					<div class="dropdown">
@@ -105,8 +96,5 @@
 			</div>
 		</div>
 	</section>
-	
-	<div style="height: 100px;"></div>
-	
 </body>
 </html>
